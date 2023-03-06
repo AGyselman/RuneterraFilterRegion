@@ -42,7 +42,7 @@ the design is inspired by the site **loluniverse**.
 ## By clicking on the faction Demacia or Zaun the images of the respective factions are now sorted.
 ![](./src/assets/imageReadme6.jpg)
 ![](./src/assets/imageReadme7.jpg)
-
+## A GIF that represents the design of the page.
 ![](./src/assets/gifruneterra.gif)
 
 
