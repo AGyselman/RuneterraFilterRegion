@@ -1,0 +1,268 @@
+@import url(//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../public/images/RuneterraMap.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 8% 4%;
+}
+
+/*******CAROUSEL*******/
+.h1 {
+  position: relative;
+  left: 50px;
+  color: #f0e6d2;
+  font-size: 60px;
+  font-weight: 700;
+  font-family: "BeaufortforLOL-Bold";
+  margin-top: -50px;
+}
+
+.item {
+  min-height: 30rem;
+  min-width: 55rem;
+  padding: 40px;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  pointer-events: none;
+  border: 1px solid #937341;
+  box-shadow: 0 0 5px rgba(253, 250, 250, 0.123);
+}
+
+.inner-carousel {
+  display: flex;
+}
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+}
+/******END CAROUSEL*******/
+
+/****** ICONS ******/
+.inner-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.item-icon img {
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  height: auto;
+  cursor: pointer;
+  margin: 60px ;
+  background-color: #010a1329;
+  border: 1px solid #1e232811;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.item-icon {
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  margin: 60px ;
+  background-color: #010a1329;
+  border: 1px solid #1e232856;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+
+/****** END ICONS ******/
+.galleryContainer{    
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: 1px solid #1e2328;
+  border-radius: 1rem;
+  box-shadow: 0 0 40px 0 #000;
+  /* overflow: hidden; */
+}
+
+.galleryItem img:hover {
+    border: 1px solid #927345;
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(253, 250, 250, 0.123);
+    transform: scale(1.1);
+    transition: all 0.3s linear;
+
+}
+
+.galleryWrapper {
+  padding: 10% 10%;
+}
+
+.filterItem ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.filterItem ul button {
+  font-family: 'Marcellus SC', serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 8px 25px; 
+  background: #1e2328;
+  color: #cdbe91;
+  box-shadow: inset 0 0 2px #000000;
+  border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+  border-image-slice: 1;
+  border-width: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.filterItem ul button:hover {
+  text-shadow: 0 0 5px #ffffff80;
+  box-shadow: 0 0 8px 0 #ffffff50;
+  background: linear-gradient(to bottom, #1e2328, #433d2b);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.filterItem ul li button.active {
+  background: rgb(65, 98, 168);
+  color: white;
+}
+
+
+/* .filterItem ul button:hover {
+  background: #222;
+  cursor: pointer;
+} */
+/**MODAL**/
+.overlay {
+  /* background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%; */
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+}
+
+.modalContainer {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex; */
+  background-color: #0a0a0c8a;
+  box-shadow: 0px 0px 18px 0px rgba(19, 19, 19, 0.491);
+  border: 1px solid #958644;
+  border-radius: 50px;
+
+}
+.modalContainer img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-bottom: 1px solid #958644;
+  /* border-radius: 30px; */
+
+}
+.modalRight {
+  width: 100%;
+
+}
+.closeBtn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+.closeBtn :hover {
+  color: black;
+}
+.content {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-family: Beaufort for LOL,Arial,sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #c4b998;
+  line-height: 1.4;
+  margin: 0 35px 35px;
+  max-width: 600px;
+  text-align: justify;
+}
+.content p {
+  padding: 5px;
+}
+.content h1 {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .2em;
+  color: rgb(103, 71, 31);
+  margin: 10px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+@media screen and (max-with: 500px) {
+  .modalContainer {
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100vh;
+  }
+  .modalContainer img {
+    width: 100%;
+  }
+}
+
+/**END MODAL**/
+
+.containerIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
